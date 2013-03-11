@@ -1,0 +1,12 @@
+# Default configurations
+common: &default_settings
+  db-unit: 'postgresql-unit'
+
+# In-memory testing
+memory:
+  <<: *default_settings
+  db-unit: 'h2-unit'
+
+# Production
+production:
+  <<: *default_settings
